@@ -126,7 +126,8 @@ public class ApplyNovaTemplateOptionsCreateNodesWithGroupEncodedIntoNameThenAddT
          }
       }
 
-      boolean securityGroupExtensionPresent = novaApi.getSecurityGroupExtensionForZone(zone).isPresent();
+      //boolean securityGroupExtensionPresent = novaApi.getSecurityGroupExtensionForZone(zone).isPresent();
+      boolean securityGroupExtensionPresent = false; 
       List<Integer> inboundPorts = Ints.asList(templateOptions.getInboundPorts());
       if (templateOptions.getSecurityGroupNames().isPresent()
             && templateOptions.getSecurityGroupNames().get().size() > 0) {

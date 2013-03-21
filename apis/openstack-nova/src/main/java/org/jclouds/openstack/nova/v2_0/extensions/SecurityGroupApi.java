@@ -38,7 +38,7 @@ import com.google.common.collect.FluentIterable;
  * @author Jeremy Daggett
  */
 @Beta
-@Extension(of = ServiceType.COMPUTE, namespace = ExtensionNamespaces.SECURITY_GROUPS)
+@Extension(of = ServiceType.COMPUTE, namespace = ExtensionNamespaces.SECURITY_GROUPS + "_disabled")
 @Timeout(duration = 180, timeUnit = TimeUnit.SECONDS)
 public interface SecurityGroupApi {
 

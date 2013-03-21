@@ -127,6 +127,13 @@ public class Extension extends Resource {
    })
    protected Extension(@Nullable String name, Set<Link> links, URI namespace, String alias, @Nullable Date updated, String description) {
       super(alias, name, links);
+      if (namespace == null) {
+         try {
+            namespace = new URI("http://docs.openstack.org/identity/api/ext/BLANK");
+         } catch (Exception e) {
+            throw new RuntimeException(e);
+         }
+      }
       this.namespace = checkNotNull(namespace, "namespace");
       this.alias = checkNotNull(alias, "alias");
       this.updated = updated;

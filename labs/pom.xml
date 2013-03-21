@@ -58,7 +58,7 @@
        <module>fgcp</module>
        <module>fgcp-au</module>
        <module>fgcp-de</module>
-       <module>abiquo</module>
+       <!--<module>abiquo</module>-->
        <module>openstack-quantum</module>
        <module>openstack-glance</module>
        <module>dynect</module>
